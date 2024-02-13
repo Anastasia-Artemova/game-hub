@@ -19,8 +19,8 @@ const useGames = (gameQury: GameQuery) => useInfiniteQuery<FetchResponse<Game>, 
     queryFn: ({pageParam = 1}) => 
     apiClient.getAll( {
         params: {
-            genres: gameQury.genre?.id, 
-            parent_platforms: gameQury.platform?.id,
+            genres: gameQury.genreId, 
+            parent_platforms: gameQury.platformId,
             ordering: gameQury.sortOrder,
             search: gameQury.searchText,
             page: pageParam

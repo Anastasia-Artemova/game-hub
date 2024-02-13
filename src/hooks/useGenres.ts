@@ -1,4 +1,3 @@
-import genres from "../data/genres";
 import { useQuery } from "@tanstack/react-query";
 import APIClient from "../services/api-client";
 
