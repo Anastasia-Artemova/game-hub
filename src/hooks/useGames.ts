@@ -7,10 +7,12 @@ import ms from "ms";
 export interface Game {
     id: number;
     name: string;
+    slug: string;
     background_image: string;
     parent_platforms: {platform: Platform}[];
     metacritic: number;
     rating_top: number;
+    description_raw: string;
   }
   
   const apiClient = new APIClient<Game>('/games');
@@ -26,7 +28,7 @@ const useGames = () => {
                 parent_platforms: gameQuery.platformId,
                 ordering: gameQuery.sortOrder,
                 search: gameQuery.searchText,
-                page: pageParam
+                page: pageParam,
             },
         }),
         getNextPageParam: (lastPage, allPages) => {
