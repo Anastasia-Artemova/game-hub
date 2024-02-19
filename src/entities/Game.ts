@@ -1,6 +1,7 @@
 import { Genre } from "./Genre";
 import { Platform } from "./Platform";
 import { Publisher } from "./Publisher";
+import { Trailer } from "./Trailers";
 
 
 export interface Game {
@@ -14,4 +15,5 @@ export interface Game {
     metacritic: number;
     rating_top: number;
     description_raw: string;
+    trailer: Trailer;
 }
