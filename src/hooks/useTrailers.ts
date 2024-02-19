@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Trailer } from '../entities/Trailers';
+import Trailer from '../entities/Trailers';
 import APIClient from '../services/api-client'
 import ms from 'ms';
 
